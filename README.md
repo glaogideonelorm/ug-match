@@ -60,17 +60,17 @@ The project requires the following Python libraries:
 
 ## How It Works
 
-- **Input:** The script reads an Excel file (default: `NameCheck (11).xls`) that must contain two columns: **CandName** and **UGName**.
+- **Input:** The script reads an Excel file (example: `data.xls`) that must contain two columns: **CandName** and **UGName**.
 - **Fuzzy Matching:**  
   - The script processes the names by trimming spaces and converting them to lowercase.
   - It then uses `fuzz.token_sort_ratio` to compute a similarity score based on the Levenshtein distance.
   - If the score is equal to or greater than the threshold (default: 80), the names are marked as a match ("Y"); otherwise, they are marked as not matching ("X").
-- **Output:** A new Excel file (default: `NameCheck_Output.xlsx`) is generated. This file includes the original name pairs and a new column labeled **Match**.
+- **Output:** A new Excel file (example: `Output.xlsx`) is generated. This file includes the original name pairs and a new column labeled **Match**.
 
 ## Usage
 
 1. **Place Your Input File:**
-   - Ensure your Excel file (e.g., `NameCheck (11).xls`) is located in the root directory of the project.
+   - Ensure your Excel file (e.g., `Data.xls`) is located in the root directory of the project.
 
 2. **Run the Script with Default File Names:**
 
@@ -78,7 +78,7 @@ The project requires the following Python libraries:
    python index.py
    ```
 
-   This command will process `NameCheck (11).xls` and output `NameCheck_Output.xlsx`.
+   This command will process `Data.xls` and output `Output.xlsx`.
 
 3. **Specify Custom File Names Using Command-Line Flags:**
 
